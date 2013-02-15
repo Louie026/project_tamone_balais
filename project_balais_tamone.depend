@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1360917253 source:c:\documents and settings\flo\my documents\l\project_balais_tamone\project.cpp
+	"project.h"
+	<iostream>
+	<math.h>
+
+1360914087 c:\documents and settings\flo\my documents\l\project_balais_tamone\project.h
+
+1360914087 source:c:\documents and settings\flo\my documents\l\project_balais_tamone\main.cpp
+	<iostream>
+	<cstdlib>
+	"project.h"
+
+1360860001 source:c:\users\lenovo\desktop\project_balais_tamone\project.cpp
+	"project.h"
+	<iostream>
+	<math.h>
+
+1360856487 c:\users\lenovo\desktop\project_balais_tamone\project.h
+
+1360856487 source:c:\users\lenovo\desktop\project_balais_tamone\main.cpp
+	<iostream>
+	<cstdlib>
+	"project.h"
+
