@@ -1,24 +1,44 @@
 # depslib dependency file v1.0
-1360917253 source:c:\documents and settings\flo\my documents\l\project_balais_tamone\project.cpp
+1361430306 source:c:\documents and settings\flo\my documents\l\project_balais_tamone\project.cpp
 	"project.h"
 	<iostream>
 	<math.h>
 
-1360914087 c:\documents and settings\flo\my documents\l\project_balais_tamone\project.h
+1361591802 c:\documents and settings\flo\my documents\l\project_balais_tamone\project.h
+	<iostream>
+	<cstdlib>
+	"math.h"
+	<string>
+	<vector>
+	<fstream>
+	<sstream>
+	<string.h>
+	<iomanip>
+	<set>
 
-1360914087 source:c:\documents and settings\flo\my documents\l\project_balais_tamone\main.cpp
+1361428850 source:c:\documents and settings\flo\my documents\l\project_balais_tamone\main.cpp
 	<iostream>
 	<cstdlib>
 	"project.h"
 
-1360860001 source:c:\users\lenovo\desktop\project_balais_tamone\project.cpp
+1361592450 source:c:\documents and settings\flo\my documents\l\project_tamone_balais\project.cpp
 	"project.h"
 	<iostream>
 	<math.h>
 
-1360856487 c:\users\lenovo\desktop\project_balais_tamone\project.h
+1361591802 c:\documents and settings\flo\my documents\l\project_tamone_balais\project.h
+	<iostream>
+	<cstdlib>
+	"math.h"
+	<string>
+	<vector>
+	<fstream>
+	<sstream>
+	<string.h>
+	<iomanip>
+	<set>
 
-1360856487 source:c:\users\lenovo\desktop\project_balais_tamone\main.cpp
+1361428850 source:c:\documents and settings\flo\my documents\l\project_tamone_balais\main.cpp
 	<iostream>
 	<cstdlib>
 	"project.h"
