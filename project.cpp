@@ -14,6 +14,7 @@ project::~project()
 {
     //dtor
 }
+
 void project::multiples_of_3_and_5()
 {
     int num[1000];
@@ -33,6 +34,7 @@ void project::multiples_of_3_and_5()
     }
 cout << x<<endl;
 }
+
 void project::even_fibonacce()
 {
     int num[33],x=0;
@@ -51,6 +53,7 @@ void project::even_fibonacce()
     }
     cout << x <<endl;
 }
+
 void project::largest_prime_factor()
 {
     long long num = 600851475143LL;
@@ -65,6 +68,7 @@ void project::largest_prime_factor()
         }
     cout << ans << endl;
 }
+
 int reverse(int x)
     {
     int y = x, z = 0;
@@ -86,6 +90,7 @@ void project::largest_palindrome_product()
         }
 cout << ans << endl;
 }
+
 void project::smallest_multiple()
 {
     int ans=0;
@@ -96,6 +101,7 @@ void project::smallest_multiple()
     }
     cout << ans << endl;
 }
+
 void project::sum_square_diff()
 {
     int j=0,k=0,y=0,z=0,ans=0;
@@ -113,6 +119,7 @@ void project::sum_square_diff()
     ans=k-z;
     cout << ans << endl;
 }
+
 bool isPrime(int p)
 {
         bool result = true;
@@ -144,6 +151,7 @@ void project::tenthousandst_prime()
         }
     cout << n << endl;
 }
+
 void project::largest_product_in_series()
 {
     int j=0,k=0,l=0;
@@ -177,6 +185,7 @@ void project::largest_product_in_series()
     }
     cout << l << endl;
 }
+
 void project::special_pytho_triplet()
 {
     int ans=0,c=0;
@@ -191,6 +200,7 @@ void project::special_pytho_triplet()
     }
     cout << ans << endl;
 }
+
 long long is_prime(long long n)
 {
 	if (n % 2 == 0)
@@ -202,6 +212,7 @@ long long is_prime(long long n)
 	}
 	return 1;
 }
+
 void project::summation_of_primes()
 {
     unsigned long long ans = 0;
@@ -216,9 +227,11 @@ void project::summation_of_primes()
 
 	cout << ans + 2 << endl;
 }
-void project::largest_product_in_grid(){
 
-int num_container[20][20] = {
+void project::largest_product_in_grid()
+{
+
+    int num_container[20][20] = {
                             { 8,02,22,97,38,15,00,40,00,75,04,05,07,78,52,12,50,77,91, 8},
                             {49,49,99,40,17,81,18,57,60,87,17,40,98,43,69,48,04,56,62,00},
                             {81,49,31,73,55,79,14,29,93,71,40,67,53,88,30,03,49,13,36,65},
@@ -241,16 +254,19 @@ int num_container[20][20] = {
                             {01,70,54,71,83,51,54,69,16,92,33,48,61,43,52,01,89,19,67,48},
                                                                                         };
 
-int start = 0;
-int end = 3;
-int product = 1;
+    int start = 0;
+    int end = 3;
+    int product = 1;
 
-vector<long int>final_results;
+    vector<long int>final_results;
 
-    for(int i=0; i<20; i++){
-        for(int j=start; j<=end; j++){
+        for(int i=0; i<20; i++)
+        {
+        for(int j=start; j<=end; j++)
+        {
             product=product*num_container[i][j];
-            if(j==end){
+            if(j==end)
+            {
             final_results.push_back(product);
             product=1;
             start++;
@@ -260,18 +276,21 @@ vector<long int>final_results;
         }
         start=0;
         end=3;
-        for(int k=start; k<=end; k++){
+        for(int k=start; k<=end; k++)
+        {
             product=product*num_container[k][i];
-            if(k==end){
-            final_results.push_back(product);
-            product=1;
-            start++;
-            end++;
+            if(k==end)
+            {
+                final_results.push_back(product);
+                product=1;
+                start++;
+                end++;
             }
-            if(k==19){
-            start=0;
-            end=3;
-            break;
+            if(k==19)
+            {
+                start=0;
+                end=3;
+                break;
             }
         }
     }
@@ -322,17 +341,7 @@ int current_row = 0;
     cout << max_product << endl;
 }
 
-void project::highly_divisible_triangular_number()
-{
-    int a=0;
-    int n=1;
-    while(project::number_divisors(a)<500){
-        a+=n;
-        n++;
-    }
-    cout<< a << endl;
-}
-int project::number_divisors(int y)
+int number_divisors(int y)
 {
     int x = 0;
     int z = sqrt(y);
@@ -351,7 +360,45 @@ int project::number_divisors(int y)
     return x;
 }
 
-void project::large_sum(){
+void project::highly_divisible_triangular_number()
+{
+    int a=0;
+    int n=1;
+    while(number_divisors(a)<500){
+        a+=n;
+        n++;
+    }
+    cout<< a << endl;
+}
+
+int charToInt(char line)
+{
+    if(line == '0')
+        return 0;
+    if (line == '1')
+        return 1;
+    if (line == '2')
+        return 2;
+    if (line == '3')
+        return 3;
+    if (line == '4')
+        return 4;
+    if (line == '5')
+        return 5;
+    if (line == '6')
+        return 6;
+    if (line == '7')
+        return 7;
+    if (line == '8')
+        return 8;
+    if (line == '9')
+        return 9;
+
+    return 0;
+}
+
+void project::large_sum()
+{
     int numbers[100][50];
     string line;
     int sum=0;
@@ -391,32 +438,19 @@ void project::large_sum(){
 
 }
 
-int project::charToInt(char line)
+int collatz_func(long long b)
 {
-    if(line == '0')
-        return 0;
-    if (line == '1')
-        return 1;
-    if (line == '2')
-        return 2;
-    if (line == '3')
-        return 3;
-    if (line == '4')
-        return 4;
-    if (line == '5')
-        return 5;
-    if (line == '6')
-        return 6;
-    if (line == '7')
-        return 7;
-    if (line == '8')
-        return 8;
-    if (line == '9')
-        return 9;
-
-    return 0;
+    long int a=1;
+        while (b != 1)
+        {
+            if (b%2 == 0)
+                b = b/2;
+            else if (b%2 == 1)
+                b = 3*b + 1;
+            a++;
+        }
+    return a;
 }
-
 
 void project::longest_collatz_sequence()
 {
@@ -434,23 +468,29 @@ void project::longest_collatz_sequence()
     cout << z << endl;
 }
 
-int project::collatz_func(long long b)
-{
-    long int a=1;
-        while (b != 1)
-        {
-            if (b%2 == 0)
-                b = b/2;
-            else if (b%2 == 1)
-                b = 3*b + 1;
-            a++;
-        }
-    return a;
-}
+
 bool composite[MAX + 1];
 vector<int> primes;
 
-void project::diophantine_reciprocals_a(){
+void seive(int n)
+{
+	int	i, j;
+
+	for (i = 2; i * i <= n; i++)
+	{
+		if (composite[i])
+			continue;
+		for (j = 2 * i; j <= n; j += i)
+			composite[j] = 1;
+		primes.push_back(i);
+	}
+	for (; i <= n; i++)
+		if (!composite[i])
+			primes.push_back(i);
+}
+
+void project::diophantine_reciprocals_a()
+{
     seive(MAX);
 	for (int N = 1000; N < MAX; N++)
 	{
@@ -477,24 +517,8 @@ void project::diophantine_reciprocals_a(){
 	}
 }
 
-void project::seive(int n)
+void project::power_digit_sum()
 {
-	int	i, j;
-
-	for (i = 2; i * i <= n; i++)
-	{
-		if (composite[i])
-			continue;
-		for (j = 2 * i; j <= n; j += i)
-			composite[j] = 1;
-		primes.push_back(i);
-	}
-	for (; i <= n; i++)
-		if (!composite[i])
-			primes.push_back(i);
-}
-
-void project::power_digit_sum(){
     stringstream ss;
     string num = "";
     int answer = 0;
@@ -506,7 +530,8 @@ void project::power_digit_sum(){
     cout << answer << endl;
 }
 
-void project::number_letter_counts(){
+void project::number_letter_counts()
+{
     string dictionary1[10] = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
     string dictionary2[18] = { "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
     string dictionary3[10] = { "onehundred", "twohundred", "threehundred", "fourhundred", "fivehundred", "sixhundred", "sevenhundred", "eighthundred", "ninehundred", "onethousand" };
@@ -556,7 +581,25 @@ void project::number_letter_counts(){
     cout<<sum_of_all_letters<<endl;
 }
 
-void project::maximum_path_sum_I(){
+int maxsum (int num1, int num2, int up)
+{
+    int biggest = num1;
+    if(num2 > biggest)
+        biggest = num2;
+    return biggest + up;
+}
+
+int path(int num, int tri[][15])
+{
+    for(int i = num-1; i >= 0; i--) {
+        for(int j = 0; j+1 < num && tri[i][j+1] != 0; j++)
+            tri[i-1][j] = maxsum(tri[i][j], tri[i][j+1], tri[i-1][j]);
+    }
+    return tri[0][0];
+}
+
+void project::maximum_path_sum_I()
+{
 int tri [15][15] = {
     {75, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
     {95, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -576,38 +619,16 @@ int tri [15][15] = {
     cout << path(15, tri) << endl;
 }
 
-
-int project::maxsum (int num1, int num2, int up)
-{
-    int biggest = num1;
-    if(num2 > biggest)
-        biggest = num2;
-    return biggest + up;
-}
-
-int project::path(int num, int tri[][15])
-{
-    for(int i = num-1; i >= 0; i--) {
-        for(int j = 0; j+1 < num && tri[i][j+1] != 0; j++)
-            tri[i-1][j] = maxsum(tri[i][j], tri[i][j+1], tri[i-1][j]);
-    }
-    return tri[0][0];
-}
-
-void project::counting_sundays()
-{
-    setStartDate(6, 1, 1901);
-    cout << sundaysOnFirst(2000) << endl;
-}
 int day,month,year;
-void project::setStartDate(int startDay, int startMonth, int startYear)
+
+void setStartDate(int startDay, int startMonth, int startYear)
 {
    day = startDay;
    month = startMonth;
    year = startYear;
 }
 
-bool project::isLeapYear()
+bool isLeapYear()
  {
     if(year % 100 == 0)
     {
@@ -621,7 +642,7 @@ bool project::isLeapYear()
         return false;
 }
 
-int project::daysInMonth()
+int daysInMonth()
 {
     if(month == 2)
     {
@@ -635,8 +656,7 @@ int project::daysInMonth()
         return 31;
 }
 
-
-void project::updateDate(int numDays)
+void updateDate(int numDays)
 {
     day += numDays;
     if(day > daysInMonth())
@@ -651,7 +671,7 @@ void project::updateDate(int numDays)
     }
 }
 
-int project::sundaysOnFirst(int endYear)
+int sundaysOnFirst(int endYear)
 {
     int sundays = 0;
     for(; year <= endYear; updateDate(7))
@@ -661,18 +681,28 @@ int project::sundaysOnFirst(int endYear)
     }
     return sundays;
 }
-int project::sumDigits(string s)
+
+void project::counting_sundays()
+{
+    setStartDate(6, 1, 1901);
+    cout << sundaysOnFirst(2000) << endl;
+}
+
+
+int sumDigits(string s)
 {
     int answer = 0;
     for(unsigned int i = 0; i < s.length(); i++)
         answer += atoi(s.substr(i,1).c_str());
     return answer;
 }
+
 void project::factorial_digit_sum()
 {
 string s = "93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000";
 cout << sumDigits(s) << endl;
 }
+
 int name_sum(string s)
 {
     int sum=0,num;
@@ -685,6 +715,7 @@ int name_sum(string s)
     }
     return sum;
 }
+
 void insertionSort(string* array,int length)
 {
     int j;
@@ -699,6 +730,7 @@ void insertionSort(string* array,int length)
         array[j+1] = key;
     }
 }
+
 void project::name_scores()
 {
     int sum=0,position;
@@ -713,4 +745,3 @@ void project::name_scores()
     }
     cout<<score<<endl;
 }
-
