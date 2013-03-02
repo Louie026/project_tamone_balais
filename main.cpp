@@ -25,9 +25,10 @@ const string Problems[] =
         "Maximum path sum I",
         "Counting Sundays",
         "Factorial digit sum",
+        "Name Scores",
         "EXIT"
     };
-const int NUM_PROBLEMS=20;
+const int NUM_PROBLEMS=21;
 const int EXIT = NUM_PROBLEMS+1;
 
 int main()
@@ -105,6 +106,9 @@ int main()
                 break;
             case 20:
                 proj.factorial_digit_sum();
+                break;
+            case 21:
+                proj.name_scores();
                 break;
             case EXIT:
                 done=true;

@@ -50,6 +50,7 @@ class project
             int sundaysOnFirst(int endYear);
         void factorial_digit_sum();
             int sumDigits(string s);
+        void name_scores();
     protected:
     private:
 };
