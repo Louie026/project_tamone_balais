@@ -745,3 +745,95 @@ void project::name_scores()
     }
     cout<<score<<endl;
 }
+int term = 3;
+float a = 1;
+float b = 1;
+float c = a + b;
+float ap = 0;
+float bp = 0;
+float cp = 0;
+void nextTerms()
+{
+    a = b;
+    ap = bp;
+    b = c;
+    bp = cp;
+    if(ap == bp)
+        c = a + b;
+    else if(bp > ap)
+        c = (a * 0.1) + b;
+    while(c > 10)
+    {
+        c = c * 0.1;
+        cp++;
+    }
+    term++;
+}
+void project::first_1000_digit_fibonacci()
+{
+    while(cp + 1 < 1000)
+        nextTerms();
+    cout << term << endl;
+}
+bool Prime(int num)
+{
+    if(num == 2)
+        return true;
+    if(num % 2 == 0 || num < 2)
+        return false;
+    int root = (int) sqrt((double)num) + 1;
+    for(int i = root; i >= 2; i--)
+    {
+        if (num % i == 0)
+            return false;
+    }
+    return true;
+}
+int numDigits(int num)
+{
+    int digits = 0;
+    if(num < 0)
+        num = -num;
+    while(num > 0) {
+        digits++;
+        num /= 10;
+    }
+    return digits;
+}
+void project::truncable_primes()
+{
+    int firstDig = 0;
+    int lastDig = 0;
+    int num = 0;
+    int total = 0;
+    bool prime = false;
+    for(int i = 8; i < 999999; i++)
+    {
+        prime = false;
+        lastDig = i % 10;
+        if(lastDig == 2 || lastDig == 3 || lastDig == 5 || lastDig == 7)
+        {
+            for(num = i; num > 0; num /= 10)
+                firstDig = num;
+            if(firstDig == 2 || firstDig == 3 || firstDig == 5 || firstDig == 7)
+            {
+                prime = true;
+                for(num = i; num > 0; num %= (int)pow(10, numDigits(num) - 1))
+                {
+                    if(!Prime(num))
+                        prime = false;
+                }
+                if(prime == true) {
+                    for(num = i; num > 0; num /= 10)
+                    {
+                        if(!Prime(num))
+                            prime = false;
+                    }
+                }
+            }
+        }
+        if(prime)
+            total += i;
+    }
+    cout << total << endl;
+}

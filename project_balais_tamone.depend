@@ -43,3 +43,20 @@
 	<cstdlib>
 	"project.h"
 
+1363766390 source:c:\documents and settings\admin\my documents\github\project_tamone_balais\main.cpp
+	<iostream>
+	<cstdlib>
+	"project.h"
+
+1363766390 c:\documents and settings\admin\my documents\github\project_tamone_balais\project.h
+	<iostream>
+	<cstdlib>
+	"math.h"
+	<string>
+	<vector>
+	<fstream>
+	<sstream>
+	<string.h>
+	<iomanip>
+	<set>
+
